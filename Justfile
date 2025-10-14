@@ -116,6 +116,10 @@ build image="aurora":
         BASE_IMAGE=ucore
         TAG_VERSION="${check}"
         ;;
+    "danklinux"*)
+        BASE_IMAGE="${check}"
+        TAG_VERSION=latest
+        ;;
     esac
 
     case "{{ image }}" in
