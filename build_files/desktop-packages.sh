@@ -5,6 +5,8 @@ set -euox pipefail
 echo "Running desktop packages scripts..."
 
 dnf -y copr enable scottames/ghostty
+dnf -y copr enable ublue-os/packages
+dnf -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # common packages installed to desktops
 dnf5 install -y \
@@ -20,9 +22,11 @@ dnf5 install -y \
   udica \
   ydotool \
   rsms-inter-fonts \
+  rsms-inter-vf-fonts \
   fira-code-fonts \
   ibm-plex-fonts-all \
   jetbrains-mono-fonts-all \
+  fontawesome-6-free-fonts \
   libvirt \
   libvirt-daemon-kvm \
   libvirt-ssh-proxy \
@@ -30,6 +34,9 @@ dnf5 install -y \
   qemu-img \
   qemu-kvm \
   edk2-ovmf \
-  guestfs-tools
+  guestfs-tools \
+  breeze-cursor-theme \
+  breeze-icon-theme \
+  uupd
 
 dnf -y copr disable scottames/ghostty

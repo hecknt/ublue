@@ -27,4 +27,7 @@ dnf5 install -y \
   lzip \
   p7zip \
   p7zip-plugins \
-  strace
+  strace \
+  powertop \
+  nu \
+  zsh
