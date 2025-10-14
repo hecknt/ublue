@@ -34,6 +34,7 @@ dnf5 install -y \
   qemu-kvm \
   edk2-ovmf \
   guestfs-tools \
+  wev \
   breeze-cursor-theme \
   breeze-icon-theme \
   uupd

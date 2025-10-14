@@ -32,6 +32,5 @@ dnf5 install -y \
   nu \
   libuser \
   lsd \
-  eza \
   yt-dlp \
   zsh
