@@ -27,8 +27,6 @@ dnf install -y \
   xdg-desktop-portal-gnome \
   xdg-desktop-portal-gtk \
   nautilus \
-  btop \
-  htop \
   rsms-inter-fonts
 
 # display manager

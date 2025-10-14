@@ -5,6 +5,9 @@ set -euox pipefail
 # common packages installed to desktops and servers
 dnf5 install -y \
   bc \
+  ccache \
+  git \
+  gh \
   erofs-utils \
   hdparm \
   iotop \
@@ -13,11 +16,15 @@ dnf5 install -y \
   just \
   lm_sensors \
   lshw \
-  lzip \
   netcat \
   nmap \
-  p7zip \
-  p7zip-plugins \
   picocom \
   socat \
-  unrar
+  unrar \
+  neovim \
+  btop \
+  htop \
+  lzip \
+  p7zip \
+  p7zip-plugins \
+  strace
