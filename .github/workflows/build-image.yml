@@ -80,23 +80,34 @@ jobs:
         uses: ASzc/change-string-case-action@v6
         with:
           string: ${{ env.IMAGE_REGISTRY }}
-      - name: Push To GHCR
-        uses: redhat-actions/push-to-registry@5ed88d269cf581ea9ef6dd6806d01562096bee9c # v2
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+      - name: Push to GHCR
+        uses: Wandalen/wretry.action@v3.8.0
         id: push
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
         env:
           REGISTRY_USER: ${{ github.actor }}
           REGISTRY_PASSWORD: ${{ github.token }}
-          SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
         with:
-          registry: ${{ steps.registry_case.outputs.lowercase }}
-          image: ${{ env.IMAGE_NAME }}
-          tags: ${{ steps.get_tags.outputs.tags }}
-          username: ${{ env.REGISTRY_USER }}
-          password: ${{ env.REGISTRY_PASSWORD }}
-          extra-args: |
-            --compression-format=gzip
-            --compression-level=9
+          action: redhat-actions/push-to-registry@v2
+          attempt_limit: 3
+          attempt_delay: 15000
+          with: |
+            image: ${{ env.IMAGE_NAME }}
+            tags: ${{ steps.get_tags.outputs.tags }}
+            registry: ${{ steps.registry_case.outputs.lowercase }}
+            username: ${{ env.REGISTRY_USER }}
+            password: ${{ env.REGISTRY_PASSWORD }}
+            extra-args: |
+              --disable-content-trust
+              --compression-format=gzip
+              --compression-level=9
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Cosign
         uses: sigstore/cosign-installer@d7543c93d881b35a8faa02e8e3605f69b7a1ce62 # v3.10.0
         with:
