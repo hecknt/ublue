@@ -5,7 +5,6 @@ set -euox pipefail
 # copr repos
 dnf -y copr enable yalter/niri
 dnf -y copr enable solopasha/hyprland 
-dnf -y copr enable scottames/ghostty
 dnf -y copr enable avengemedia/danklinux
 dnf -y copr enable avengemedia/dms
 
@@ -19,7 +18,6 @@ dnf install -y \
   cava \
   wl-clipboard \
   fastfetch \
-  fira-code-fonts \
   gammastep \
   nwg-look \
   qt6-qtmultimedia \
@@ -27,7 +25,6 @@ dnf install -y \
   xdg-desktop-portal-gnome \
   xdg-desktop-portal-gtk \
   nautilus \
-  rsms-inter-fonts
 
 # display manager
 dnf install -y \
@@ -39,7 +36,6 @@ dnf install -y \
 dnf install -y \
   niri \
   hyprland \
-  ghostty \
   matugen \
   cliphist \
   dms \
@@ -48,6 +44,5 @@ dnf install -y \
 # disable the Repos we pulled in above
 dnf -y copr disable yalter/niri
 dnf -y copr disable solopasha/hyprland 
-dnf -y copr disable scottames/ghostty
 dnf -y copr disable avengemedia/danklinux
 dnf -y copr disable avengemedia/dms
