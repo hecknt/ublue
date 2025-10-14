@@ -92,7 +92,7 @@ build image="aurora":
         ;;
     "aurora"*|"bluefin"*)
         BASE_IMAGE="${check}"
-        TAG_VERSION=stable-daily
+        TAG_VERSION=stable
         ;;
     "bazzite"*)
         BASE_IMAGE="${check}"
