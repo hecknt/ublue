@@ -21,6 +21,9 @@ runs:
 
         # Add Images
         case "${{ inputs.image_flavor }}" in
+        "Aurora")
+          images+=("aurora" "aurora-nvidia")
+          ;;
         "Bazzite")
           images+=("bazzite" "bazzite-nvidia")
           #images+=("bazzite-deck" "bazzite-deck-nvidia")
