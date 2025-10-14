@@ -3,14 +3,14 @@ name: Build Desktop
 on:
   pull_request:
     branches:
-      - main
+      - aurora
     paths-ignore:
       - "**.md"
   schedule:
     - cron: '31 6 * * *'  # 10:05am UTC everyday
   push:
     branches:
-      - main
+      - aurora
     paths-ignore:
       - '**.md'
   workflow_dispatch:
