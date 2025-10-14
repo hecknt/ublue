@@ -1,5 +1,5 @@
 ---
-name: Build Desktop
+name: Building Desktop
 on:
   pull_request:
     branches:
