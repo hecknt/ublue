@@ -30,4 +30,8 @@ dnf5 install -y \
   strace \
   powertop \
   nu \
+  libuser \
+  lsd \
+  eza \
+  yt-dlp \
   zsh
