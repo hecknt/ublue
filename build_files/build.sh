@@ -1,6 +1,11 @@
 #!/bin/bash
 
 set -ouex pipefail
+case "${IMAGE}" in
+"danklinux"*)
+  /ctx/desktop-dank.sh
+  ;;
+esac
 
 # desktop stuff (courtesy of bOS)
 case "${IMAGE}" in

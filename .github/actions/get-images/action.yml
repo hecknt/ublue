@@ -33,6 +33,9 @@ runs:
           images+=("bluefin-latest" "bluefin-latest-nvidia")
           images+=("bluefin-gdx" "bluefin-lts")
           ;;
+        "DankLinux")
+          images+=("danklinux" "danklinux-nvidia")
+          ;;
         "Server")
           images+=("ucore-minimal" "ucore" "ucore-nvidia")
           images+=("ucore-hci" "ucore-hci-nvidia")

@@ -21,6 +21,8 @@ images := '(
     [ucore-hci-nvidia]="stable-nvidia-zfs"
     [ucore]="stable-zfs"
     [ucore-nvidia]="stable-nvidia-zfs"
+    [danklinux]="base-main"
+    [danklinux-nvidia]="base-nvidia"
 )'
 export SUDO_DISPLAY := if `if [ -n "${DISPLAY:-}" ] || [ -n "${WAYLAND_DISPLAY:-}" ]; then echo true; fi` == "true" { "true" } else { "false" }
 export SUDOIF := if `id -u` == "0" { "" } else if SUDO_DISPLAY == "true" { "sudo --askpass" } else { "sudo" }

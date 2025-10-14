@@ -3,14 +3,14 @@ name: Build Desktop
 on:
   pull_request:
     branches:
-      - aurora
+      - main
     paths-ignore:
       - "**.md"
   schedule:
     - cron: '31 6 * * *'  # 10:05am UTC everyday
   push:
     branches:
-      - aurora
+      - main
     paths-ignore:
       - '**.md'
   workflow_dispatch:
@@ -28,6 +28,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_flavor: ["Aurora"]
+        image_flavor: ["Aurora" "DankLinux"]
     with:
       image_flavor: ${{ matrix.image_flavor }}
