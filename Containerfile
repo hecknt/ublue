@@ -12,6 +12,10 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE}:${TAG_VERSION}
 
 ARG BASE_IMAGE="aurora"
 ARG IMAGE="aurora"
+ARG SET_X=""
+ARG VERSION=""
+ARG DNF=""
+
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
