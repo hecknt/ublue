@@ -90,8 +90,8 @@ jobs:
           SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
         with:
           registry: ${{ steps.registry_case.outputs.lowercase }}
-          image: ${{ steps.image_case.outputs.lowercase }}
-          tags: ${{ steps.metadata.outputs.tags }}
+          image: ${{ env.IMAGE_NAME }}
+          tags: ${{ steps.get_tags.outputs.tags }}
           username: ${{ env.REGISTRY_USER }}
           password: ${{ env.REGISTRY_PASSWORD }}
           extra-args: |
