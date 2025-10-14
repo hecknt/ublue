@@ -6,7 +6,6 @@ echo "Running desktop packages scripts..."
 
 dnf -y copr enable scottames/ghostty
 dnf -y copr enable ublue-os/packages
-dnf -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # common packages installed to desktops
 dnf5 install -y \
