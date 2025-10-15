@@ -10,6 +10,7 @@ dnf -y copr enable ublue-os/packages
 # common packages installed to desktops
 dnf5 install -y \
   kitty \
+  bazaar \
   ghostty \
   picard \
   sxiv \
