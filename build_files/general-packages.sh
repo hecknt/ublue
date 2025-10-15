@@ -30,6 +30,7 @@ dnf5 install -y \
   strace \
   powertop \
   nu \
+  nmtui \
   libuser \
   lsd \
   yt-dlp \

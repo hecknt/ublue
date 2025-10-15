@@ -35,6 +35,7 @@ dnf5 install -y \
   edk2-ovmf \
   guestfs-tools \
   wev \
+  ddcutil \
   breeze-cursor-theme \
   breeze-icon-theme \
   uupd
