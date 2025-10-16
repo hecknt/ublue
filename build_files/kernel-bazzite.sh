@@ -14,21 +14,13 @@ mv /tmp/rpms/* /tmp/akmods/
 
 # Remove existing kernel WITHOUT removing anything else
 dnf5 versionlock delete kernel{-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs,-headers,-devel}
-installed_pkgs=()
-for pkg in kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs,-headers,-devel}; do
-  if rpm -q "$pkg" &>/dev/null; then
-    installed_pkgs+=("$pkg")
-  else
-    echo "Skipping $pkg (not installed)"
-  fi
-done
-if [ ${#installed_pkgs[@]} -gt 0 ]; then
-  rpm -e --nodeps "${installed_pkgs[@]}"
-fi
+dnf5 -y remove --no-autoremove kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs,-headers}
 
 # Install downloaded Bazzite kernel
 dnf5 -y --setopt=disable_excludes=* install /tmp/kernel-rpms/*.rpm
 dnf5 versionlock add kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-lib,-headers,-devel,-devel-matched}
+# reinstall virtualbox-guest-additions that got caught in the crossfire 
+dnf5 -y install virtualbox-guest-additions
 
 # Build initramfs
 KERNEL_SUFFIX=""
