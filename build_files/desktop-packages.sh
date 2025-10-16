@@ -20,6 +20,7 @@ dnf5 install -y \
   patch \
   pipx \
   udica \
+  firewall-config \
   ydotool \
   rsms-inter-fonts \
   rsms-inter-vf-fonts \
