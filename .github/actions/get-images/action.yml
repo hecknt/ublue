@@ -23,7 +23,7 @@ runs:
         case "${{ inputs.image_flavor }}" in
         "Aurora")
           images+=("aurora" "aurora-nvidia")
-          images+=("aurora-bazzite-kernel" "aurora-bazzite-kernel-nvidia")
+          images+=("aurora-bazzite-kernel")
           ;;
         "Bazzite")
           images+=("bazzite" "bazzite-nvidia")
@@ -31,7 +31,7 @@ runs:
           ;;
         "DankLinux")
           images+=("danklinux" "danklinux-nvidia")
-          images+=("danklinux-bazzite-kernel" "danklinux-bazzite-kernel-nvidia")
+          images+=("danklinux-bazzite-kernel")
           ;;
         "Server")
           images+=("ucore-minimal" "ucore" "ucore-nvidia")
