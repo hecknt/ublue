@@ -2,14 +2,21 @@
 
 set -ouex pipefail
 
-# for builds where i want the bazzite kernel installed
+# for builds where the bazzite kernel should be installed
 case "${IMAGE}" in
   *"-bazzite-kernel"*)
   /ctx/kernel-bazzite.sh
   ;;
 esac
 
-# desktop stuff (courtesy of bOS)
+# for builds where nvidia support should be installed
+case "${IMAGE}" in
+  *"nvidia"*)
+  /ctx/nvidia-install.sh
+  ;;
+esac
+
+# desktop stuff
 case "${IMAGE}" in
 "aurora"*|"bluefin"*|"danklinux"*)
   /ctx/desktop-changes.sh

@@ -18,7 +18,7 @@ dnf5 versionlock delete kernel{-core,-modules,-modules-core,-modules-extra,-tool
 dnf5 -y remove --no-autoremove kernel-modules kernel-modules-core kernel-modules-extra
 
 # Install downloaded Bazzite kernel
-dnf5 -y install /tmp/bazzite-kernel-build/kernel-rpms/kernel{,-core,-modules,-modules-core,-modules-extra}-${KERNEL}.rpm
+dnf5 -y --setopt=disable_excludes=* install /tmp/bazzite-kernel-build/kernel-rpms/kernel{,-core,-modules,-modules-core,-modules-extra}-${KERNEL}.rpm
 dnf5 versionlock add kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs,-headers,-devel,-devel-matched}
 # reinstall virtualbox-guest-additions that got caught in the crossfire 
 dnf5 -y install virtualbox-guest-additions
