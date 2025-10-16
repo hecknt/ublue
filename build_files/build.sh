@@ -2,6 +2,13 @@
 
 set -ouex pipefail
 
+# for builds where i want the bazzite kernel installed
+case "${IMAGE}" in
+  *"-bazzite-kernel"*)
+  /ctx/kernel-bazzite.sh
+  ;;
+esac
+
 # desktop stuff (courtesy of bOS)
 case "${IMAGE}" in
 "aurora"*|"bluefin"*|"danklinux"*)
