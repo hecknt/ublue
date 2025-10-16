@@ -14,12 +14,12 @@ These are my personal Universal Blue image builds, customized with my own person
 
 Images built with `bazzite-kernel` in the name have the kernel used in [Bazzite](https://bazzite.gg) installed instead of the main kernel. Examples include:
 - `ublue:aurora-bazzite-kernel`
-- `ublue:danklinux-bazzite-kernel-nvidia`
+- `ublue:danklinux-bazzite-kernel`
 
 ### <ins>Sub-Images: nvidia</ins>
 Images built with `nvidia` in the name have the NVIDIA drivers installed in the image. Examples include:
 - `ublue:aurora-nvidia`
-- `danklinux-bazzite-kernel-nvidia`
+- `ublue:danklinux-nvidia`
 
 ## Installation
 

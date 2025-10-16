@@ -9,13 +9,6 @@ case "${IMAGE}" in
   ;;
 esac
 
-# for builds where nvidia support should be installed
-case "${IMAGE}" in
-  *"nvidia"*)
-  /ctx/nvidia-install.sh
-  ;;
-esac
-
 # desktop stuff
 case "${IMAGE}" in
 "aurora"*|"bluefin"*|"danklinux"*)
