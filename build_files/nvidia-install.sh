@@ -6,7 +6,7 @@ RELEASE="$(rpm -E %fedora)"
 : "${AKMODNV_PATH:=/tmp/akmods-rpms}"
 
 # this is only to aid in human understanding of any issues in CI
-find "${AKMODNV_PATH}"/
+#find "${AKMODNV_PATH}"/ # THIS ALSO BREAKS MY BUILD BECAUSE IT EXITS WITH A FAILURE!!!!
 
 if ! command -v dnf5 >/dev/null; then
     echo "Requires dnf5... Exiting"
