@@ -31,13 +31,9 @@ dnf install -y \
   unbound \
   ublue-polkit-rules \
   samba \
-
-# display manager
-dnf install -y \
-  sddm \
   fprintd \
   fprintd-pam
-
+ 
 # copr (Niri, Hyprland, DMS)
 dnf install -y \
   niri \
@@ -45,7 +41,9 @@ dnf install -y \
   matugen \
   cliphist \
   dms \
+  dms-greeter \
   dgop
+systemctl enable greetd
 
 # remove zfs-fuse (why is it here????? it shouldnt be here)
 rpm -e --nodeps zfs-fuse
