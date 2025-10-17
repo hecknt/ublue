@@ -37,7 +37,6 @@ dnf install -y \
 # copr (Niri, Hyprland, DMS)
 dnf install -y \
   niri \
-  hyprland \
   matugen \
   cliphist \
   dms \
