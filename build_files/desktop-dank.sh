@@ -74,6 +74,8 @@ ExecStart=/usr/bin/systemctl disable dms-greeter-folder-create.service
 WantedBy=multi-user.target
 SYNC_EOF
 
+systemctl enable dms-greeter-folder-create.service
+
 # remove zfs-fuse (why is it here????? it shouldnt be here)
 rpm -e --nodeps zfs-fuse
 
