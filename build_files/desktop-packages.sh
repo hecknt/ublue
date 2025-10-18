@@ -20,6 +20,8 @@ dnf5 install -y \
   patch \
   pipx \
   udica \
+  mpv \
+  adb \
   firewall-config \
   ydotool \
   rsms-inter-fonts \
