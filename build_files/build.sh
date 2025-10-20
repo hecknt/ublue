@@ -2,10 +2,10 @@
 
 set -ouex pipefail
 
-# for builds where the bazzite kernel should be installed
+# for builds where the CachyOS kernel should be installed
 case "${IMAGE}" in
-  *"-bazzite-kernel"*)
-  /ctx/kernel-bazzite.sh
+  "kernel-cachyos"*)
+  /ctx/kernel-cachyos.sh
   ;;
 esac
 

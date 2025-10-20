@@ -4,7 +4,6 @@ repo_name := "hecknt"
 username := "hecknt"
 images := '(
     [aurora]="aurora"
-    [aurora-bazzite-kernel]="aurora"
     [aurora-nvidia]="aurora-nvidia"
     [bluefin-latest]="bluefin"
     [bluefin-latest-nvidia]="bluefin-nvidia-open"
@@ -20,7 +19,8 @@ images := '(
     [ucore-nvidia]="stable-nvidia-zfs"
     [danklinux]="base-main"
     [danklinux-nvidia]="base-nvidia"
-    [danklinux-bazzite-kernel]="base-main"
+    [danklinux-kernel-cachyos]="base-main"
+    [danklinux-kernel-cachyos-nvidia]="base-nvidia"
 )'
 export SUDO_DISPLAY := if `if [ -n "${DISPLAY:-}" ] || [ -n "${WAYLAND_DISPLAY:-}" ]; then echo true; fi` == "true" { "true" } else { "false" }
 export SUDOIF := if `id -u` == "0" { "" } else if SUDO_DISPLAY == "true" { "sudo --askpass" } else { "sudo" }
