@@ -9,12 +9,10 @@ These are my personal Universal Blue image builds, customized with my own person
 - `ublue:aurora` - an Aurora stable image with packages added for my benefit. A great option for KDE users.
 - `ublue:danklinux` - an image built off of `ublue/base-main` with both Niri and Hyprland installed, along with [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell/) and various other utilities to make the desktop more complete. A great option for Tiling Window Manager users.
 
-### <ins>Sub-Images: bazzite-kernel</ins>
-#### NOTE: `bazzite-kernel` IMAGES ARE COMPLETELY BROKEN RIGHT NOW. <ins>DO NOT USE.</ins>
+### <ins>Sub-Images: kernel-cachyos</ins>
 
-Images built with `bazzite-kernel` in the name have the kernel used in [Bazzite](https://bazzite.gg) installed instead of the main kernel. Examples include:
-- `ublue:aurora-bazzite-kernel`
-- `ublue:danklinux-bazzite-kernel`
+Images built with `kernel-cachyos` in the name have the kernel used in [CachyOS](https://cachyos.org) installed instead of the main kernel. Currently, the only image built with this is:
+- `ublue:danklinux-kernel-cachyos`
 
 ### <ins>Sub-Images: nvidia</ins>
 Images built with `nvidia` in the name have the NVIDIA drivers installed in the image. Examples include:

@@ -43,6 +43,7 @@ dnf5 install -y \
   ddcutil \
   breeze-cursor-theme \
   breeze-icon-theme \
+  zsync \
   uupd
 
 dnf -y copr disable scottames/ghostty

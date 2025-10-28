@@ -32,6 +32,9 @@ dnf install -y \
   ublue-polkit-rules \
   samba \
   fprintd \
+  adw-gtk3-theme \
+  sassc \
+  libappstream-glib \
   fprintd-pam
  
 # copr (Niri, Hyprland, DMS)
@@ -42,6 +45,7 @@ dnf install -y \
   cliphist \
   dms \
   dms-greeter \
+  quickshell-git \
   dgop
 systemctl enable greetd
 
