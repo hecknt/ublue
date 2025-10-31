@@ -8,7 +8,6 @@ dnf5 -y copr enable bazzite-org/obs-vkcapture
 # Bazzite Repos
 dnf5 -y copr enable bazzite-org/bazzite
 dnf5 -y copr enable bazzite-org/bazzite-multilib
-dnf5 -y copr enable bazzite-org/LatencyFleX
 
 find /etc/yum.repos.d/
 
@@ -22,4 +21,3 @@ sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/negativo17-fedora-multimedia.re
 dnf5 -y copr disable bazzite-org/obs-vkcapture
 dnf5 -y copr disable bazzite-org/bazzite
 dnf5 -y copr disable bazzite-org/bazzite-multilib
-dnf5 -y copr disable bazzite-org/LatencyFleX 

@@ -10,7 +10,7 @@ dnf5 versionlock delete kernel{-core,-modules,-modules-core,-modules-extra,-tool
 dnf5 -y remove --no-autoremove --setopt protect_running_kernel=false kernel-modules kernel-modules-core kernel-modules-extra
 
 # Install CachyOS kernel & addons
-dnf5 -y install kernel-cachyos{,-core,-modules,-devel,-devel-matched}
+dnf5 -y install kernel-cachyos{,-core,-modules,-devel,-devel-matched} || true
 dnf5 versionlock add kernel-cachyos{,-core,-modules,-devel,-devel-matched}
 dnf5 -y swap zram-generator-defaults cachyos-settings
 dnf5 -y install scx-scheds

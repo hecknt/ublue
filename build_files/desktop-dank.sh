@@ -27,7 +27,6 @@ dnf install -y \
   xdg-desktop-portal-gtk \
   nautilus \
   vulkan-tools \
-  v4l2loopback \
   unbound \
   ublue-polkit-rules \
   samba \
@@ -36,7 +35,20 @@ dnf install -y \
   sassc \
   libappstream-glib \
   fprintd-pam
- 
+
+# install dolphin as a file manager
+dnf install -y \
+  dolphin \
+  plasma-workspace \
+  -x xwaylandvideobridge # -x to exclude the installation of xwaylandvideobridge, it does not work with niri.
+
+# Remove any and all plasma desktop session files.
+# The plasma desktop is partially installed by plasma-workspace, including the session file.
+# Since this is an image that is only tested with Niri and Hyprland, we remove the session file.
+# I have no idea if KDE would work in this image, and I will not test it. Ever.
+# Besides, KDE Plasma is PARTIALLY installed - not fully installed - by plasma-workspace. It would not work well.
+rm /usr/share/wayland-sessions/plasma.desktop
+
 # copr (Niri, Hyprland, DMS)
 dnf install -y \
   niri \
@@ -79,9 +91,6 @@ WantedBy=multi-user.target
 SYNC_EOF
 
 systemctl enable dms-greeter-folder-create.service
-
-# remove zfs-fuse (why is it here????? it shouldnt be here)
-rpm -e --nodeps zfs-fuse
 
 # disable the Repos we pulled in above
 dnf -y copr disable yalter/niri

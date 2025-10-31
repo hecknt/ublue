@@ -6,7 +6,7 @@ These are my personal Universal Blue image builds, customized with my own person
 
 ## Desktop Images
 
-- `ublue:aurora` - an Aurora stable image with packages added for my benefit. A great option for KDE users.
+- `ublue:aurora` - an Aurora:stable image with packages added for my benefit. A great option for KDE users. 
 - `ublue:danklinux` - an image built off of `ublue/base-main` with both Niri and Hyprland installed, along with [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell/) and various other utilities to make the desktop more complete. A great option for Tiling Window Manager users.
 
 ### <ins>Sub-Images: kernel-cachyos</ins>

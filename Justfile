@@ -116,7 +116,7 @@ build image="aurora":
         ;;
     "danklinux"*)
         BASE_IMAGE="${check}"
-        TAG_VERSION=42
+        TAG_VERSION=43
         ;;
     esac
 
