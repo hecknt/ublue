@@ -11,6 +11,12 @@ dnf5 -y remove --no-autoremove --setopt protect_running_kernel=false kernel-modu
 
 # Install CachyOS kernel & addons
 dnf5 -y install kernel-cachyos{,-core,-modules,-devel,-devel-matched} || true
+
+# Make sure that the kernel packages are listed as installed. If this command fails, then the script will exit with an error. 
+# The post-install script for kernel-cachyos-core errors out when trying to run dracut, requiring || true to let the script continue anyways.
+# We already run dracut later in the script, so this error can safely be ignored. If the package does actually fail to install, however, then the entire build should fail.
+dnf5 list --installed kernel-cachyos kernel-cachyos-core kernel-cachyos-devel kernel-cachyos-devel-matched kernel-cachyos-modules
+
 dnf5 versionlock add kernel-cachyos{,-core,-modules,-devel,-devel-matched}
 dnf5 -y swap zram-generator-defaults cachyos-settings
 dnf5 -y install scx-scheds
