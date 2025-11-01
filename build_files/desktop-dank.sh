@@ -7,6 +7,7 @@ dnf -y copr enable yalter/niri
 dnf -y copr enable solopasha/hyprland 
 dnf -y copr enable avengemedia/danklinux
 dnf -y copr enable avengemedia/dms
+dnf -y copr enable errornointernet/quickshell
 dnf -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # use flatpak for web browser instead
@@ -98,3 +99,4 @@ dnf -y copr disable yalter/niri
 dnf -y copr disable solopasha/hyprland 
 dnf -y copr disable avengemedia/danklinux
 dnf -y copr disable avengemedia/dms
+dnf -y copr disable errornointernet/quickshell
