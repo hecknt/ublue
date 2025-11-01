@@ -36,14 +36,6 @@ dnf install -y \
   libappstream-glib \
   fprintd-pam
 
-# build tools for hyprland plugins
-dnf install -y \
-  meson \
-  cmake \
-  gcc-c++ \
-  udis86 \
-  udis86-devel
-
 # install dolphin as a file manager
 dnf install -y \
   dolphin \
@@ -61,6 +53,7 @@ rm /usr/share/wayland-sessions/plasma.desktop
 dnf install -y \
   niri \
   hyprland \
+  hyprland-devel \
   matugen \
   cliphist \
   dms \
