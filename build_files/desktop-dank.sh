@@ -40,7 +40,9 @@ dnf install -y \
 dnf install -y \
   meson \
   cmake \
-  gcc-c++
+  gcc-c++ \
+  udis86 \
+  udis86-devel
 
 # install dolphin as a file manager
 dnf install -y \
