@@ -31,6 +31,7 @@ dnf5 install -y \
   jetbrains-mono-fonts-all \
   fontawesome-6-free-fonts \
   fontawesome-6-brands-fonts \
+  pnpm \
   libvirt \
   libvirt-daemon-kvm \
   libvirt-ssh-proxy \

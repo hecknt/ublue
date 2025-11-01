@@ -40,13 +40,13 @@ dnf install -y \
 dnf install -y \
   dolphin \
   plasma-workspace \
+  ark \
   -x xwaylandvideobridge # -x to exclude the installation of xwaylandvideobridge, it does not work with niri.
 
 # Remove any and all plasma desktop session files.
 # The plasma desktop is partially installed by plasma-workspace, including the session file.
 # Since this is an image that is only tested with Niri and Hyprland, we remove the session file.
-# I have no idea if KDE would work in this image, and I will not test it. Ever.
-# Besides, KDE Plasma is PARTIALLY installed - not fully installed - by plasma-workspace. It would not work well.
+# KDE Plasma is PARTIALLY installed - not fully installed - by plasma-workspace. It will not work well.
 rm /usr/share/wayland-sessions/plasma.desktop
 
 # copr (Niri, Hyprland, DMS)
