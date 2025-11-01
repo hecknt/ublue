@@ -36,6 +36,12 @@ dnf install -y \
   libappstream-glib \
   fprintd-pam
 
+# build tools for hyprland plugins
+dnf install -y \
+  meson \
+  cmake \
+  gcc-c++
+
 # install dolphin as a file manager
 dnf install -y \
   dolphin \
