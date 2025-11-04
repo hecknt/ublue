@@ -22,6 +22,7 @@ dnf install -y \
   gammastep \
   nwg-look \
   qt6-qtmultimedia \
+  qt6ct \
   qt5ct \
   xdg-desktop-portal-gnome \
   xdg-desktop-portal-gtk \
@@ -59,7 +60,6 @@ dnf install -y \
   dms \
   dms-greeter \
   quickshell-git \
-  qt6ct-kde \
   dgop
 systemctl enable greetd
 
