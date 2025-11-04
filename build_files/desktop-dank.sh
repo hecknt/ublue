@@ -54,7 +54,6 @@ dnf install -y \
   niri \
   hyprland \
   hyprland-devel \
-  hyprland-qtutils \
   matugen \
   cliphist \
   dms \
