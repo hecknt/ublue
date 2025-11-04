@@ -57,7 +57,8 @@ dnf install -y \
   hyprland-devel \
   matugen \
   cliphist \
-  dms \
+  dms-0.3.2 \
+  dms-cli-0.3.2 \
   dms-greeter \
   quickshell-git \
   dgop
