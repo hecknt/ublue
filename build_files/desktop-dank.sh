@@ -8,7 +8,6 @@ dnf -y copr enable solopasha/hyprland
 dnf -y copr enable avengemedia/danklinux
 dnf -y copr enable avengemedia/dms
 dnf -y copr enable errornointernet/quickshell
-dnf -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # use flatpak for web browser instead
 dnf remove -y firefox firefox-langpacks
@@ -23,7 +22,7 @@ dnf install -y \
   gammastep \
   nwg-look \
   qt6-qtmultimedia \
-  qt6ct \
+  qt5ct \
   xdg-desktop-portal-gnome \
   xdg-desktop-portal-gtk \
   nautilus \
@@ -55,11 +54,13 @@ dnf install -y \
   niri \
   hyprland \
   hyprland-devel \
+  hyprland-qtutils \
   matugen \
   cliphist \
   dms \
   dms-greeter \
   quickshell-git \
+  qt6ct-kde \
   dgop
 systemctl enable greetd
 
