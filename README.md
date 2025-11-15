@@ -1,5 +1,12 @@
 # Hec's Universal Blue Images
 
+## This project is archived, and will not receive any further updates!
+> [!IMPORTANT]
+>
+> If you are using any `danklinux` images, you can safely migrate over to [danklinux-bluebuild](https://github.com/hecknt/danklinux-bluebuild), where equivalent images are still being built and updated.
+>
+> If you are using any `aurora` images, you will have to migrate over to [Base Aurora](https://getaurora.dev) or build your own Aurora image using either [blue-build](https://github.com/blue-build/template) or the [ublue-os image template](https://github.com/ublue-os/image-template).
+
 [![Build Desktop](https://github.com/hecknt/ublue/actions/workflows/build-desktop.yml/badge.svg)](https://github.com/hecknt/ublue/actions/workflows/build-desktop.yml)
 
 These are my personal Universal Blue image builds, customized with my own personal additions to make my life easier. Everything is built under one single image `ublue` with different tags for different environments.
